@@ -7,7 +7,9 @@
 ## Prequisites
 
 - Es muss ein Terminal verhanden sein und z-Shell sollte die default Shell sein. (Anleitung folgt)
-- Es muss stow und fzf auf dem System installiert sein. Achtung fzf muss >= v48.0 sein
+  - Z Shell kann über System Packetmanager installiert werden (apt/pacman), als default Shell mit ```chsh <username>```
+- Es muss stow und fzf auf dem System installiert sein. Achtung fzf muss >= v48.0 sein. 
+  - Einfachster weg ist das aktuelle Release von GitHub zu laden und an die passende Stelle packen. 
 
 ## Install
 
