@@ -16,7 +16,9 @@
 
 ### Stow, zsh und p10k
 
-1) Repo nach ~/.dotfiles clonen
+Top Guide für Stow siehe hier --> https://medium.com/quick-programming/managing-dotfiles-with-gnu-stow-9b04c155ebad
+
+1) Repo nach ~/dotfiles clonen
 2) Im dotfiles Verzeichniss ```stow .``` eingeben, sollte ein Konflikt Fehler kommen entweder manuell die Konflikte lösen indem die Files im Home Verzeichnis umbenannt werden. Oder 
 ```stow --adopt .```
 3) Einmal checken ob im Home Verzeichnis die erwateten Symlinks entstanden sind und dann Terminal neu starten oder ```exec zsh``` ausführen.
