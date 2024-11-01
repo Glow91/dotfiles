@@ -1,4 +1,3 @@
-require 'core.options' -- Load general options
 
 -- Install package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -14,9 +13,40 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require('core.options') -- Load general options
+
 -- Import color theme based on environment variable NVIM_THEME
 local default_color_scheme = 'nord'
 
-require('lazy').setup({
-    require 'plugins.themes.nord',    
-})
+local plugins = {
+  require('plugins.nord'),
+  require('plugins.nvim-tree')
+}
+
+local options = {
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = { "nord" },
+	},
+	rtp = {
+		disabled_plugins = {
+			"gzip",
+			"matchit",
+			"matchparen",
+			"netrw",
+			"netrwPlugin",
+			"tarPlugin",
+			"tohtml",
+			"tutor",
+			"zipPlugin",
+		},
+	},
+	change_detection = {
+		-- TODO: set to false later
+		notify = true,
+	},
+}
+
+require('lazy').setup(plugins, options)
